@@ -1,0 +1,5 @@
+msgid "Chat Room"
+msgstr "បន្ទប់ជជែក"
+
+msgid "Press Enter to Refresh"
+msgstr "ចុច Enter ដេីម្បីមេីលសារថ្មី"

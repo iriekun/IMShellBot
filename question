@@ -6,6 +6,7 @@
 echo "Why hello there.
 Would you like some tea (y/n)?"
 read answer
+echo $answer >> test.txt
 [[ $answer =~ ^([yY][eE][sS]|[yY])$ ]] && echo "OK then, here you go: http://www.rivertea.com/blog/wp-content/uploads/2013/12/Green-Tea.jpg" || echo "OK then."
 until [ "$SUCCESS" = "y" ] ;do
 	echo 'Do you like Music? mykeyboardstartshere "Yass!" "No"'

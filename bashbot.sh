@@ -337,7 +337,6 @@ while [ "$1" == "startbot" ]; do {
 
 }; done
 
-
 case "$1" in
 	"outproc")
 		until [ "$line" = "imprettydarnsuredatdisisdaendofdacmd" ];do
@@ -358,7 +357,7 @@ case "$1" in
 		;;
 	"start")
 		tmux kill-session -t $ME&>/dev/null
-		tmux new-session -d -s $ME "bash $SCRIPT startbot" && echo "Bot started successfully. Tmux session name is $ME" || echo "An error occurred while starting the bot."
+		tmux new-session -d -s $ME "bash $SCRIPT startbot" && echo "Bot started successfully. Tmux session name is $ME" || echo $ME "An error occurred while starting the bot."
 		;;
 	"kill")
 		tmux kill-session -t $ME &>/dev/null
@@ -370,7 +369,23 @@ case "$1" in
 	"attach")
 		tmux attach -t $ME
 		;;
+	"letchat")
+		TMP=`cat chatid`
+		echo "Sending message $* to $TMP users."
+		[ $(wc -l count | sed 's/ count//g') -gt 300 ] && sleep="sleep 0.5"
+		shift
+		if [[ $* =~ ^$ ]]; #if message == null
+		then
+			cat $TMP
+		else
+			send_message $TMP "$*"; $sleep;
+			chmod 777 $TMP
+			echo $ME" : "$*>>$TMP
+			cat $TMP
+		fi
+		;;
 	*)
 		echo "Available arguments: outproc, count, broadcast, start, kill, help, attach"
 		;;
+	
 esac

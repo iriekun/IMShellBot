@@ -1,0 +1,27 @@
+#!/bin/sh
+
+FILE1=/tmp/chat1-$$
+
+GETTEXT="gettext -d chat_ui"
+
+which gdialog 2> /dev/null && DIALOG=gdialog || DIALOG=dialog
+
+end () {
+	rm -f $FILE1
+	exit
+}
+
+#t=" : "
+while true
+do
+	tmp=$( cat chatid )
+
+	#Display only the last 10 lines of chat history
+	MSG="`tail -10 $tmp`"
+	#Replay _ with : 
+	#MSG="${MSG/\_/$t}"
+	#echo $MSG
+
+	$DIALOG --title "`$GETTEXT \"Chat Room\"`" --inputbox "`$GETTEXT \"Press Enter to Refresh\"`\n\n""$MSG" 8 35 2> $FILE1 || end
+	./bashbot.sh letchat `cat $FILE1` 
+done

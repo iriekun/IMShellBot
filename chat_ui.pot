@@ -1,0 +1,6 @@
+msgid "Chat Room"
+msgstr ""
+
+msgid "Press Enter to Refresh"
+msgstr ""
+

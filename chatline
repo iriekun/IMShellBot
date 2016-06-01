@@ -1,0 +1,10 @@
+#!/bin/bash
+
+t=`cat chatid`
+
+while read line;
+do
+	echo ${t}_$line >> $t
+done < /dev/stdin
+
+

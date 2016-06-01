@@ -71,7 +71,11 @@ http://github.com/topkecleon/telegram-bot-bash
 			if tmux ls | grep -q $copname; then killproc && send_message "${USER[ID]}" "Command canceled.";else send_message "${USER[ID]}" "No command is currently running.";fi
 			;;
 		*)
-			if tmux ls | grep -v send | grep -q $copname;then inproc; else send_message "${USER[ID]}" "$MESSAGE" "safe";fi
+			echo "${USER[ID]}">chatid
+			tmp=`cat chatid`
+			echo "${USER[ID]}"" : "$MESSAGE>>$tmp
+		#	iconv -f ascii -t utf-8 "$tmp" -o "$tmp.utf8" && mv -f "$tmp.utf8" "$tmp"
+			#if tmux ls | grep -v send | grep -q $copname;then inproc; else send_message "${USER[ID]}" "$MESSAGE" "safe";fi
 			;;
 	esac
 fi
