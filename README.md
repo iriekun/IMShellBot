@@ -2,7 +2,7 @@
 
 # Instruction
 - create a telegram account
-- create bot account
+- create bot account and generate your bot token
 - create a file called "token" and place your access token to token file
 - On istagram
   - add your bot by using @your_bot_name Ex: @imshellbot
