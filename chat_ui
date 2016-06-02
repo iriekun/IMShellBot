@@ -18,9 +18,6 @@ do
 
 	#Display only the last 10 lines of chat history
 	MSG="`tail -10 $tmp`"
-	#Replay _ with : 
-	#MSG="${MSG/\_/$t}"
-	#echo $MSG
 
 	$DIALOG --title "`$GETTEXT \"Chat Room\"`" --inputbox "`$GETTEXT \"Press Enter to Refresh\"`\n\n""$MSG" 8 35 2> $FILE1 || end
 	./bashbot.sh letchat `cat $FILE1` 
