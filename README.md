@@ -4,13 +4,13 @@
 - create a telegram account
 - create bot account and generate your bot token
 - create a file called "token" and place your access token to token file
-- On istagram
+- On teleram
   - add your bot by using @your_bot_name Ex: @imshellbot
   - send any message to @your_bot_name 
 
-- on terminal:
+- On terminal:
   - make install
-  - install tmux 
+  - install tmux (search for specific command to fit your os)
   - ./bashbot start
   - ./bashbot letchat 'your message' : send message through TUI
   - ./chat_ui : send message through GUI
