@@ -360,7 +360,10 @@ case "$1" in
 		tmux attach -t $ME
 		;;
 	"letchat")
-		TMP=`cat chatid`
+		file="chatid"
+		if [ -f $file ];
+		then
+		TMP=`cat $file`
 		echo "Sending message $* to $TMP users."
 		[ $(wc -l count | sed 's/ count//g') -gt 300 ] && sleep="sleep 0.5"
 		shift
@@ -372,6 +375,9 @@ case "$1" in
 			chmod 777 $TMP
 			echo $ME" : "$*>>$TMP
 			cat $TMP
+		fi
+		else
+			echo "wait for text from telegram"
 		fi
 		;;
 	*)

@@ -14,11 +14,18 @@ end () {
 #t=" : "
 while true
 do
+	if [ -f "chatid" ];
+	then
 	tmp=$( cat chatid )
-
+		
 	#Display only the last 10 lines of chat history
 	MSG="`tail -10 $tmp`"
 
 	$DIALOG --title "`$GETTEXT \"Chat Room\"`" --inputbox "`$GETTEXT \"Press Enter to Refresh\"`\n\n""$MSG" 8 35 2> $FILE1 || end
 	./bashbot.sh letchat `cat $FILE1` 
+	else
+		$DIALOG --title "`$GETTEXT \"Chat Room\"`" --inputbox "`$GETTEXT \"Press Enter to Refresh\"`\n\n`$GETTEXT \"Wait text from Telegram user\"`""$MSG" 8 35 2> $FILE1 || end
+	./bashbot.sh letchat `cat $FILE1`
+	fi 
+	
 done

@@ -3,3 +3,5 @@ msgstr "បន្ទប់ជជែក"
 
 msgid "Press Enter to Refresh"
 msgstr "ចុច Enter ដេីម្បីមេីលសារថ្មី"
+msgid "Wait text from Telegram user"
+msgstr "រងចាំសារពីអ្នកប្រេីប្រាស់ក្នុង Telegram"

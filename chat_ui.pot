@@ -4,3 +4,7 @@ msgstr ""
 msgid "Press Enter to Refresh"
 msgstr ""
 
+msgid "Wait text from Telegram user"
+msgstr ""
+
+
