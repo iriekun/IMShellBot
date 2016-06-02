@@ -11,7 +11,7 @@
 - On terminal:
   - make install
   - install tmux (search for specific command to fit your os)
-  - ./bashbot start
-  - ./bashbot letchat 'your message' : send message through TUI
+  - ./bashbot.sh start
+  - ./bashbot.sh letchat 'your message' : send message through TUI
   - ./chat_ui : send message through GUI
   - LANG=km_KH ./chat_ui : send message through GUI with Khmer localisation
