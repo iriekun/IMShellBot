@@ -2,11 +2,13 @@
 
 # Instruction
 - create a telegram account
-- add @imshellbot
-- send any message to @imshellbot
+- create bot account
+- create a file called "token" and place your access token to token file
+- On istagram
+  - add your bot by using @your_bot_name Ex: @imshellbot
+  - send any message to @your_bot_name 
+
 - on terminal:
-  - create bot account
-  - place your access token to token file
   - make install
   - install tmux 
   - ./bashbot start
