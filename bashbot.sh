@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# bashbot, the Telegram bot written in bash.
-# Written by Drew (@topkecleon) and Daniil Gentili (@danogentili).
-# Also contributed: JuanPotato, BigNerd95, TiagoDanin, iicc1.
-# https://github.com/topkecleon/telegram-bot-bash
-
-# Depends on JSON.sh (http://github.com/dominictarr/JSON.sh) (MIT/Apache),
-# and on tmux (http://github.com/tmux/tmux) (BSD).
-# This file is public domain in the USA and all free countries.
-# Elsewhere, consider it to be WTFPLv2. (wtfpl.net/txt/copying)
-
 if [ ! -f "JSON.sh/JSON.sh" ]; then
 	echo "You did not clone recursively! Downloading JSON.sh..."
 	git clone http://github.com/dominictarr/JSON.sh
