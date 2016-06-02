@@ -4,7 +4,7 @@
 - create a telegram account
 - create bot account and generate your bot token
 - create a file called "token" and place your access token to token file
-- On teleram
+- On telegram
   - add your bot by using @your_bot_name Ex: @imshellbot
   - send any message to @your_bot_name 
 
