@@ -9,8 +9,7 @@ Imagine there are 2 users communicating with each other. One user use telegram a
 - create bot account and generate your bot token (follow https://github.com/topkecleon/telegram-bot-bash.git)
 - create a file called "token" and place your access token to token file
 - On terminal:
-  - make install
-  - git clone json.sh (if you didn't clone my repository recursively)
+  - make install (please note that the command in makefile is for linux based OS, so if you use different OS, please be aware of the file location in the command)
   - install tmux (search for specific command to fit your os)
   - ./bashbot.sh kill 
   - ./bashbot.sh start (run these 2 commands when you make any change on bashbot.sh and commands.sh files)
