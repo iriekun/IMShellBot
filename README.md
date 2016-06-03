@@ -1,5 +1,5 @@
 # imshellbot
-This is an instant messaging utility tool entirely writen on bash shell. imshellbot allow a user to communicate instantly to other users on Telegram by using TUI or GUI(wriiten on shell). It has localization of English and Khmer ភាសាខ្មែរ(Cambodia). This program used telegram bashbot and depend on tmux and json.sh.
+This is an instant messaging utility tool entirely writen on bash shell. imshellbot allow users to communicate instantly to other users on Telegram by using TUI or GUI(wriiten on shell). It has localization of English and Khmer ភាសាខ្មែរ(Cambodia). This program used telegram bashbot and depend on tmux and json.sh.
 
 # How it work
 Imagine there are 2 users communicating with each other. One user use telegram and another user use imshellbot GUI. Hence, in order to make this program work you need to have a telegram and a bot account. 
